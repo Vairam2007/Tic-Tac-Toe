@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom'
 import homeimg from "/Images/homeimg.jpg"
 
 const Home = () => {
-    const handleReload = () => {
-        window.location.reload();
-      };
-      handleReload()
     return (
         <>
         <div className="w-full min-h-[100vh] bg-gray-900 flex justify-center items-center flex-col gap-[50px]">
