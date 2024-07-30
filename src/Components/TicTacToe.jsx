@@ -70,8 +70,8 @@ const TicTacToe = () => {
     return (
         <>
         
-        <div className="w-full flex justify-center items-center text-[40px] font-bold text-white" id='text'></div>
-    <div className="w-full h-[50vh] flex justify-center items-center flex-col">
+        <div className="w-full flex justify-center items-center text-[30px] font-bold text-white" id='text'></div>
+    <div className="w-full min-h-[50vh] flex justify-center items-center flex-col">
         <div className="w-[330px] h-[100px] flex justify-center items-center my-[5px]">
             <button  id="one" onClick={()=>{click("one",0)}}  className="w-[100px] h-[100px] bg-gray-700 mx-[5px] rounded-[10px]"></button>
             <button id='two' onClick={()=>{click("two",1)}} className="w-[100px] h-[100px] bg-gray-700 mx-[5px] rounded-[10px]"></button>
