@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import xmark from "/Images/xmarkimg.png"
 import omark from "/Images/omarkimg.jpg"
 
@@ -44,10 +44,24 @@ const TicTacToe = () => {
             [2,4,6]
         ]
 
+        var core=0
+        data.forEach(element => {
+            if(element == ""){
+                core++
+            }
+        });
+        if(core == 0){
+            document.getElementById("text").textContent="... Draw ..."
+                var audio = new Audio("/Images/mixkit-losing-bleeps-2026.wav")
+                audio.play()
+        }
+
         val.forEach(element => {
             if(data[element[0]] == data[element[1]] && data[element[1]] == data[element[2]] && data[element[2]] !== "" ){
                 document.getElementById("text").textContent=`${data[element[0]]} is the winner`
                 asval = false;
+                var audio = new Audio("/Images/mixkit-game-bonus-reached-2065.wav")
+                audio.play()
             }
         });
         

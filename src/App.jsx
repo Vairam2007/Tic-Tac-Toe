@@ -1,21 +1,23 @@
 import React from 'react'
-import TicTacToe from './Components/TicTacToe'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Tic_layout  from './Components/Tic_layout'
+import Home from './Components/Home'
 
 const App = () => {
 
-    function reload(){
-        document.location.reload()
-    }
-
-  return (
-    <>
-    <div className="w-ful h-[100vh] bg-gray-900 flex justify-center items-center flex-col gap-[30px]">
-        <div className="text-[40px] text-white font-bold">Tic Tac Toe</div>
-        <TicTacToe />
-        <button onClick={reload} className='bg-blue-400 py-[10px] px-[20px] rounded-[20px] font-semibold '>Reset</button>
-    </div>
-    </>
-  )
+    return (
+      <>
+      <BrowserRouter>
+      <Routes>
+        <Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/Play" element={<Tic_layout />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
+      </>
+    )
+  
 }
 
 export default App
